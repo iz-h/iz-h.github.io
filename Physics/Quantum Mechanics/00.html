@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>0.数学基础 &#8212; iz-h.github.io 0.0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=eb1cd0b9"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Physics/Quantum Mechanics/00';</script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="1. 公设" href="01.html" />
+    <link rel="prev" title="Quantum Mechanics" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">iz-h.github.io 0.0.1 文档</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Classical%20Mechanics/index.html">Classical Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Classical%20Mechanics/00.html">0. 前言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Classical%20Mechanics/01.html">1. 哈密顿力学初步</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Classical%20Mechanics/02.html">2. 最小作用量原理</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Quantum Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">0.数学基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01.html">1. 公设</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Physics/Quantum Mechanics/00.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>0.数学基础</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">两个最重要的数学基本定理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">向量空间</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">内积</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">共轭向量</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">施密特正交化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">线性变换: 算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">共轭算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">厄米算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">幺正算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">投影算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">矩阵表示</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">向量</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">算符</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">四种特殊矩阵</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">矩阵元表示</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">变换矩阵</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">厄米算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">对角化</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>0.数学基础<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>两个最重要的数学基本定理<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>若V为有限维空间, 则在V上任一<strong>厄米算符的固有向量都可作为V的基底</strong>. 寻找空间的基底=寻找厄米算符的固有向量.</p></li>
+<li><p>作用在有限维空间中的任意<strong>厄米算符都可以对角化</strong>.
+2'. 若厄米算符<strong>AB可交换</strong>, 那么在此空间有一组基底可以同时是A和B的固有向量, <strong>同时对角化AB</strong>.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>向量空间<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>vector + scalar, vector之间有加法运算, {V, +}构成交换群, 也就是满足封闭性, 结合律, 交换律, 单位元, 逆元. vector和scalar之间有数乘运算, 满足分配律, 结合律, 单位元.</p>
+<p>物理上使用的主要有四种: 坐标向量空间, 矩阵空间, 连续函数空间, 无限可微函数空间.</p>
+</section>
+<section id="id4">
+<h2>内积<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>交换就加复共轭, 分配律, 大于等于零，ket=0才零.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    &amp;\braket{a|b} = \braket{b|a}^{*} \\
+    &amp;\bra{a} (\beta \ket{b} + \gamma \ket{c}) = \beta \braket{a|b} + \gamma \braket{a|c} \\
+    &amp;\braket{a|a} \geq 0 \\
+    &amp;\braket{a|a} = 0 \quad \text{if} \; \ket{a} = 0
+\end{aligned}
+\end{split}\]</div>
+<p>所以说, 根据第一条的要求, 坐标空间的内积定义为:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ket{a} = (a_1, a_2, \dots, a_n), \quad \ket{b} = (b_1, b_2, \dots, b_n) \\
+\braket{a|b}=a_1^*b_1+a_2^*b_2+\cdots+a_n^*b_n
+\end{split}\]</div>
+<p>连续函数空间:</p>
+<div class="math notranslate nohighlight">
+\[
+\braket{f|g}=\int_{a}^{b}f^{*}(x)g(x)\mathrm{d}x
+\]</div>
+<p>注意这里还没有bra的严格定义. bra只是表达 &quot;要进行内积(并且有顺序)&quot; 的符号.</p>
+</section>
+<section id="id5">
+<h2>共轭向量<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>每一个 <span class="math notranslate nohighlight">\(\ket{a}\)</span> 都伴随着一个线性泛函 <span class="math notranslate nohighlight">\(\ket{a}^{\dagger}=\bra{a}\)</span>, 它将任意的 <span class="math notranslate nohighlight">\(\ket{b}\)</span> 映射为上面说的内积 <span class="math notranslate nohighlight">\(\braket{a|b}\)</span>.</p>
+<p>所以, 在 <span class="math notranslate nohighlight">\(\ket{a}\)</span> 是列向量的有限维矩阵空间中, 可以定义 <span class="math notranslate nohighlight">\(\bra{a}\)</span> 为共轭行向量, 因为这样符合向量空间和内积的定义. 可见在矩阵空间中ket和bra就是简单的转置共轭关系. 而在无限维空间中, <span class="math notranslate nohighlight">\(\bra{a}\)</span> 通常表示为一个积分算子, 这时候可能更能体现出它是一个线性泛函.</p>
+</section>
+<section id="id6">
+<h2>施密特正交化<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>就是减去自己在其他向量方向的上的分量，然后除以模长。</p>
+<p>首先</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{e_1}=\frac{\ket{a_1}}{\sqrt{\braket{a_1|a_1}}}
+\]</div>
+<p>然后</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{e_m'}=\ket{a_m}-\sum_{i=1}^{m-1}\ket{e_i}\braket{e_i|a_m}
+\]</div>
+<p>最后</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{e_m}=\frac{\ket{e_m'}}{\braket{e_m'|e_m'}}
+\]</div>
+</section>
+<section id="id7">
+<h2>线性变换: 算符<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>在向量空间中,变换就是把空间中的元素送到同一个或者另一个元素.</p>
+<p>如果, 加起来再作用, 等于分别作用之和, 那么这个变换就是线性的.</p>
+<div class="math notranslate nohighlight">
+\[
+T(\alpha \ket{a} + \beta \ket{b}) = \alpha T(\ket{a}) + \beta T(\ket{b})
+\]</div>
+<p>那么 <span class="math notranslate nohighlight">\(T\)</span> 就是线性变换, 也叫做算符.</p>
+</section>
+<section id="id8">
+<h2>共轭算符<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>如果 <span class="math notranslate nohighlight">\(T\ket{b} = \ket{c}\)</span>, 那么 <span class="math notranslate nohighlight">\(T^{\dagger} \bra{b} = \bra{c}\)</span>.</p>
+<p>另一个等价的定义的推导:</p>
+<p>如果 <span class="math notranslate nohighlight">\(T\ket{b} = \ket{c}\)</span>, 那么我们再作用一个 <span class="math notranslate nohighlight">\(\bra{a}\)</span>, 得到 <span class="math notranslate nohighlight">\(\bra{a}T\ket{b} = \braket{a|c}\)</span>.</p>
+<p>做一次共轭, 得到 <span class="math notranslate nohighlight">\(\bra{a}T\ket{b}^* = \braket{c|a} = \bra{b}T^{\dagger}\ket{a}\)</span>.</p>
+<p>于是我们得到了共轭算符的另一个等价定义:</p>
+<div class="math notranslate nohighlight">
+\[
+\bra{a}T\ket{b} = \bra{b}T^{\dagger}\ket{a}^*
+\]</div>
+<p>注意, 如果定义 <span class="math notranslate nohighlight">\(T\)</span> 是作用ket的, 那么 <span class="math notranslate nohighlight">\(T^{\dagger}\)</span> 是作用bra的. <span class="math notranslate nohighlight">\(T^{\dagger}\)</span> 写在bra左边和写在右边是一个意思. 不过上面这种情况 <span class="math notranslate nohighlight">\(T^{\dagger}\)</span> 当然要写在右边, 不然会误以为它作用在一个数上.</p>
+</section>
+<section id="id9">
+<h2>厄米算符<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(T^{\dagger} = T, \; \bra{a}T\ket{b} = \bra{b}T\ket{a}^*\)</span></p>
+</section>
+<section id="id10">
+<h2>幺正算符<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\( U^{\dagger}U = UU^{\dagger} = I\)</span>, 作用前后, 内积不变: <span class="math notranslate nohighlight">\(\braket{Ua|Ub} = \bra{a}U^{\dagger}U\ket{b} = \braket{a|b}\)</span>.</p>
+</section>
+<section id="id11">
+<h2>投影算符<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>降到某一维上. 求和全投影则是单位算符, 也就是封闭性关系式.</p>
+<p>重要的性质: <span class="math notranslate nohighlight">\(P^2 = P, \; P^{\dagger} = P\)</span>.</p>
+</section>
+<section id="id12">
+<h2>矩阵表示<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h3>向量<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ket{a}_e = \begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}_e
+= a_1\ket{e_1}+a_2\ket{e_2}+\cdots+a_n\ket{e_n}
+\end{split}\]</div>
+<p>注意, 有下标意味着已经有了参考系, 于是当然有具体的坐标值了. <span class="math notranslate nohighlight">\(\ket{a}_e\ne\ket{a}_b\)</span>. 这里 <span class="math notranslate nohighlight">\(\ket{e_n}\)</span> 并没有明确表示. 它们在自己的基底下才是单位向量. 同时, 它们也并没有被要求正交归一. 也就是说这是一种一般的向量表示. <span class="math notranslate nohighlight">\(a_i = \braket{e_i|a}\)</span> 并不一定成立.</p>
+</section>
+<section id="id14">
+<h3>算符<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>大概就是把基向量随 <span class="math notranslate nohighlight">\(T\)</span> 变化后的坐标(在基向量自己下的)竖着写. 如果显式是自己基下表示的, 那么就都是单位向量. 基向量 <span class="math notranslate nohighlight">\((1,0)\)</span> 在 <span class="math notranslate nohighlight">\(T\)</span> 作用下转到 <span class="math notranslate nohighlight">\((0,1)\)</span> (等于是说 <span class="math notranslate nohighlight">\(0\)</span> 个基一加 <span class="math notranslate nohighlight">\(1\)</span> 个基二), 那么 <span class="math notranslate nohighlight">\(T\)</span> 这一列就应该竖着写 <span class="math notranslate nohighlight">\((0,1)\)</span>. 所以说重点还是下面这个式子, 要把它们分解到基向量上去.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}&amp;T\ket{e_1}=t_{11}\ket{e_1}+t_{21}\ket{e_2}+\cdots+t_{n1}\ket{e_n}\\&amp;T\ket{e_2}=t_{12}\ket{e_1}+t_{22}\ket{e_2}+\cdots+t_{n2}\ket{e_n}\\&amp;T\ket{e_n}=t_{1n}\ket{e_1}+t_{2n}\ket{e_2}+\cdots+t_{nn}\ket{e_n}
+\end{aligned}
+\end{split}\]</div>
+<p>那么 <span class="math notranslate nohighlight">\(T\)</span> 在 <span class="math notranslate nohighlight">\(e\)</span> 基下的表示就是:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_e&amp;=\begin{pmatrix}t_{11}&amp;t_{12}&amp;{\dots}&amp;t_{1n}\\t_{21}&amp;t_{22}&amp;{\dots}&amp;t_{2n}\\{\vdots}&amp;{\vdots}&amp;&amp;{\vdots}\\t_{n1}&amp;t_{n2}&amp;{\dots}&amp;t_{nn}\end{pmatrix} \\\\
+&amp;[T\ket{a}]_e = T_e\ket{a}_e
+\end{aligned}
+\end{split}\]</div>
+<p>这是由线性算符的性质 <span class="math notranslate nohighlight">\(T(\alpha \ket{a} + \beta \ket{b}) = \alpha T\ket{a} + \beta T\ket{b}\)</span> 导致的, 最终 <span class="math notranslate nohighlight">\(T\)</span> 还是作用到了 <span class="math notranslate nohighlight">\(\ket{e_i}\)</span> 上. 至于系数的对应关系, 可以这样想: 第一行和被作用的向量构成结果的第一行, 那必然全是和 <span class="math notranslate nohighlight">\(\ket{e_1}\)</span> 相关的系数. 或者考察第一列, 也是一样的.</p>
+<p>第二个式子是说，实际上这里可以先没有任何坐标系，直接去写 <span class="math notranslate nohighlight">\(T\ket{a}\)</span>。不过我们看上面三排式子，如果 <span class="math notranslate nohighlight">\(\ket{a}\)</span> 是按 <span class="math notranslate nohighlight">\(\ket{e}\)</span> 分解的话，是最终还是在 <span class="math notranslate nohighlight">\(\ket{e}\)</span> 表象，可以证明这和把算符和向量都投影到基向量上去然后再作用是等价的。</p>
+</section>
+</section>
+<section id="id15">
+<h2>四种特殊矩阵<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>对称矩阵: <span class="math notranslate nohighlight">\(A^T = A\)</span>
+厄米共轭矩阵: <span class="math notranslate nohighlight">\(A^{\dagger} = A\)</span></p>
+<p>正交矩阵: <span class="math notranslate nohighlight">\(A^TA = AA^T = I\)</span>
+幺正矩阵: <span class="math notranslate nohighlight">\(A^{\dagger}A = AA^{\dagger} = I\)</span></p>
+<p>注意它们之间的退化关系.</p>
+</section>
+<section id="id16">
+<h2>矩阵元表示<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<p>如果 <span class="math notranslate nohighlight">\(e\)</span> 是正交归一的, 那么</p>
+<div class="math notranslate nohighlight">
+\[
+t_{ij} = \bra{e_i}T\ket{e_j}
+\]</div>
+<p>这个可以从上面那三排式子看出来。</p>
+</section>
+<section id="id17">
+<h2>变换矩阵<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>为了记忆方便, 下面所有基都是正交归一的. 对于不是正交归一的基, 可以利用前面的方法得到相同的结构.</p>
+<p>把 <span class="math notranslate nohighlight">\(\ket{\psi}_b = S \ket{\psi}_e\)</span> 写开来, 就是</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+    \braket{b_1 | \psi} \\
+    \vdots
+\end{pmatrix}
+=\begin{pmatrix}
+    \braket{b_1 | e_1} &amp; \dots \\
+    \vdots &amp; \ddots
+\end{pmatrix}
+\begin{pmatrix}
+    \braket{e_1 | \psi} \\
+    \vdots
+\end{pmatrix}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(S\)</span> 必须这样写. 我们把这个将 <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> 的坐标数值从 <span class="math notranslate nohighlight">\(e\)</span> 表象转到 <span class="math notranslate nohighlight">\(b\)</span> 表象的矩阵记作 <span class="math notranslate nohighlight">\(S_{e \to b}\)</span>.</p>
+<p>把 <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> 送到 <span class="math notranslate nohighlight">\(\ket{\psi^{\prime}}\)</span> 这个线性变换在 <span class="math notranslate nohighlight">\(e\)</span> 表象和 <span class="math notranslate nohighlight">\(b\)</span> 表象下分别为 <span class="math notranslate nohighlight">\(T_e\)</span> 和 <span class="math notranslate nohighlight">\(T_b\)</span>, 那么它们的关系是怎样的呢? 可以这么思考:</p>
+<ol class="arabic simple">
+<li><p>为了得到 <span class="math notranslate nohighlight">\(\ket{\psi^{\prime}}_e\)</span>, 可以先用 <span class="math notranslate nohighlight">\(S_{e \to b}\)</span> 把 <span class="math notranslate nohighlight">\(\ket{\psi}_e\)</span> 送到 <span class="math notranslate nohighlight">\(\ket{\psi}_b\)</span></p></li>
+<li><p>这样就可以用 <span class="math notranslate nohighlight">\(T_b\)</span> 作用在上面了.</p></li>
+<li><p>用 <span class="math notranslate nohighlight">\(S_{b \to e}\)</span> 作用在上面，转换回在 <span class="math notranslate nohighlight">\(e\)</span> 表象下的坐标数值</p></li>
+</ol>
+<p>于是我们得到了等式:</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{\psi^{\prime}}_e = T_e \ket{\psi}_e = S_{b \to e}T_bS_{e \to b} \ket{\psi}_e
+\]</div>
+<p>也就是说, 同一个算符在不同表象下有:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    T_e &amp;= S_{b \to e}T_bS_{e \to b} \\
+    &amp;=\begin{pmatrix}
+    \braket{e_1 | b_1} &amp; \dots \\
+    \vdots &amp; \ddots
+    \end{pmatrix}
+    \begin{pmatrix}
+    \bra{b_1} T \ket{b_1} &amp; \dots \\
+    \vdots &amp; \ddots
+    \end{pmatrix}
+    \begin{pmatrix}
+    \braket{b_1 | e_1} &amp; \dots \\
+    \vdots &amp; \ddots
+    \end{pmatrix}
+\end{aligned}
+\end{split}\]</div>
+<p>记住, 矩阵, 或者说算符, 是要作用在向量上的. 所以应该意识到这里的作用顺序是从右往左.</p>
+</section>
+<section id="id18">
+<h2>厄米算符<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<p>所有本征值为<strong>实数</strong>，并且不同本征值对应的本征向量<strong>正交</strong>。第一个是写出特征方程，作用上bra，取复共轭。第二个是写两个特征方程，作用上bra，取复共轭，要利用本征值为实数的结论。</p>
+</section>
+<section id="id19">
+<h2>对角化<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<p>前面我们知道了 <span class="math notranslate nohighlight">\(T_e = S_{b \to e}T_bS_{e \to b}\)</span>。下面我们证明，如果 <span class="math notranslate nohighlight">\(b\)</span> 是 <span class="math notranslate nohighlight">\(T\)</span> 的本征基, 那么 <span class="math notranslate nohighlight">\(T_b\)</span> 将是对角的。</p>
+<p>为了得到 <span class="math notranslate nohighlight">\(T_b\)</span>，可以先在最右遍作用上 <span class="math notranslate nohighlight">\(S_{b \to e}\)</span>，我们会得到</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    T_e S_{b \to e} &amp;= T_e (\ket{b_1}_e \dots \ket{b_n}_e) \\
+    &amp;= (\lambda_1 \ket{b_1}_e \dots \lambda_n \ket{b_n}_e) \\
+    &amp;= (\ket{b_1}_e \dots \ket{b_n}_e) \begin{pmatrix} \lambda_1 &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \lambda_n \end{pmatrix}
+\end{aligned}
+\end{split}\]</div>
+<p>如果再在左边作用上 <span class="math notranslate nohighlight">\(S_{e \to b}\)</span>，那么就得到了对角元是本征值的 <span class="math notranslate nohighlight">\(T_b\)</span>。</p>
+<p>回想之前我们用基的变化去写算符的方法。我们可以说，在本征基下，算符的操作只是拉伸或者压缩，不会有旋转。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T_b \ket{b_i}_b =\begin{pmatrix} \lambda_1 &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \lambda_n \end{pmatrix} \begin{pmatrix}
+\vdots \\ 1 \\ \vdots\\ \end{pmatrix} = \lambda_i \ket{b_i}_b
+\end{split}\]</div>
+<p>作用在有限维的厄米算符都可以对角化。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">Quantum Mechanics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">1. 公设</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">两个最重要的数学基本定理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">向量空间</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">内积</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">共轭向量</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">施密特正交化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">线性变换: 算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">共轭算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">厄米算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">幺正算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">投影算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">矩阵表示</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">向量</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">算符</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">四种特殊矩阵</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">矩阵元表示</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">变换矩阵</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">厄米算符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">对角化</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： yizhouh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, yizhouh.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

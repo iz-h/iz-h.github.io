@@ -1,0 +1,252 @@
+# 0.数学基础
+
+## 两个最重要的数学基本定理
+
+1. 若V为有限维空间, 则在V上任一**厄米算符的固有向量都可作为V的基底**. 寻找空间的基底=寻找厄米算符的固有向量.
+2. 作用在有限维空间中的任意**厄米算符都可以对角化**.
+2'. 若厄米算符**AB可交换**, 那么在此空间有一组基底可以同时是A和B的固有向量, **同时对角化AB**.
+
+## 向量空间
+
+vector + scalar, vector之间有加法运算, {V, +}构成交换群, 也就是满足封闭性, 结合律, 交换律, 单位元, 逆元. vector和scalar之间有数乘运算, 满足分配律, 结合律, 单位元.
+
+物理上使用的主要有四种: 坐标向量空间, 矩阵空间, 连续函数空间, 无限可微函数空间.
+
+## 内积
+
+交换就加复共轭, 分配律, 大于等于零，ket=0才零.
+
+$$
+\begin{aligned}
+    &\braket{a|b} = \braket{b|a}^{*} \\
+    &\bra{a} (\beta \ket{b} + \gamma \ket{c}) = \beta \braket{a|b} + \gamma \braket{a|c} \\
+    &\braket{a|a} \geq 0 \\
+    &\braket{a|a} = 0 \quad \text{if} \; \ket{a} = 0
+\end{aligned}
+$$
+
+所以说, 根据第一条的要求, 坐标空间的内积定义为:
+
+$$
+\ket{a} = (a_1, a_2, \dots, a_n), \quad \ket{b} = (b_1, b_2, \dots, b_n) \\
+\braket{a|b}=a_1^*b_1+a_2^*b_2+\cdots+a_n^*b_n
+$$
+
+连续函数空间:
+
+$$
+\braket{f|g}=\int_{a}^{b}f^{*}(x)g(x)\mathrm{d}x
+$$
+
+注意这里还没有bra的严格定义. bra只是表达 "要进行内积(并且有顺序)" 的符号.
+
+## 共轭向量
+
+每一个 $\ket{a}$ 都伴随着一个线性泛函 $\ket{a}^{\dagger}=\bra{a}$, 它将任意的 $\ket{b}$ 映射为上面说的内积 $\braket{a|b}$.
+
+所以, 在 $\ket{a}$ 是列向量的有限维矩阵空间中, 可以定义 $\bra{a}$ 为共轭行向量, 因为这样符合向量空间和内积的定义. 可见在矩阵空间中ket和bra就是简单的转置共轭关系. 而在无限维空间中, $\bra{a}$ 通常表示为一个积分算子, 这时候可能更能体现出它是一个线性泛函.
+
+## 施密特正交化
+
+就是减去自己在其他向量方向的上的分量，然后除以模长。
+
+首先
+
+$$
+\ket{e_1}=\frac{\ket{a_1}}{\sqrt{\braket{a_1|a_1}}}
+$$
+
+然后
+
+$$
+\ket{e_m'}=\ket{a_m}-\sum_{i=1}^{m-1}\ket{e_i}\braket{e_i|a_m}
+$$
+
+最后
+
+$$
+\ket{e_m}=\frac{\ket{e_m'}}{\braket{e_m'|e_m'}}
+$$
+
+## 线性变换: 算符
+
+在向量空间中,变换就是把空间中的元素送到同一个或者另一个元素.
+
+如果, 加起来再作用, 等于分别作用之和, 那么这个变换就是线性的.
+
+$$
+T(\alpha \ket{a} + \beta \ket{b}) = \alpha T(\ket{a}) + \beta T(\ket{b})
+$$
+
+那么 $T$ 就是线性变换, 也叫做算符.
+
+## 共轭算符
+
+如果 $T\ket{b} = \ket{c}$, 那么 $T^{\dagger} \bra{b} = \bra{c}$.
+
+另一个等价的定义的推导:
+
+如果 $T\ket{b} = \ket{c}$, 那么我们再作用一个 $\bra{a}$, 得到 $\bra{a}T\ket{b} = \braket{a|c}$.
+
+做一次共轭, 得到 $\bra{a}T\ket{b}^* = \braket{c|a} = \bra{b}T^{\dagger}\ket{a}$.
+
+于是我们得到了共轭算符的另一个等价定义:
+
+$$
+\bra{a}T\ket{b} = \bra{b}T^{\dagger}\ket{a}^*
+$$
+
+注意, 如果定义 $T$ 是作用ket的, 那么 $T^{\dagger}$ 是作用bra的. $T^{\dagger}$ 写在bra左边和写在右边是一个意思. 不过上面这种情况 $T^{\dagger}$ 当然要写在右边, 不然会误以为它作用在一个数上.
+
+## 厄米算符
+
+$T^{\dagger} = T, \; \bra{a}T\ket{b} = \bra{b}T\ket{a}^*$
+
+## 幺正算符
+
+$ U^{\dagger}U = UU^{\dagger} = I$, 作用前后, 内积不变: $\braket{Ua|Ub} = \bra{a}U^{\dagger}U\ket{b} = \braket{a|b}$.
+
+## 投影算符
+
+降到某一维上. 求和全投影则是单位算符, 也就是封闭性关系式.
+
+重要的性质: $P^2 = P, \; P^{\dagger} = P$.
+
+## 矩阵表示
+
+### 向量
+
+$$
+\ket{a}_e = \begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}_e
+= a_1\ket{e_1}+a_2\ket{e_2}+\cdots+a_n\ket{e_n}
+$$
+
+注意, 有下标意味着已经有了参考系, 于是当然有具体的坐标值了. $\ket{a}_e\ne\ket{a}_b$. 这里 $\ket{e_n}$ 并没有明确表示. 它们在自己的基底下才是单位向量. 同时, 它们也并没有被要求正交归一. 也就是说这是一种一般的向量表示. $a_i = \braket{e_i|a}$ 并不一定成立.
+
+### 算符
+
+大概就是把基向量随 $T$ 变化后的坐标(在基向量自己下的)竖着写. 如果显式是自己基下表示的, 那么就都是单位向量. 基向量 $(1,0)$ 在 $T$ 作用下转到 $(0,1)$ (等于是说 $0$ 个基一加 $1$ 个基二), 那么 $T$ 这一列就应该竖着写 $(0,1)$. 所以说重点还是下面这个式子, 要把它们分解到基向量上去.
+
+$$
+\begin{aligned}&T\ket{e_1}=t_{11}\ket{e_1}+t_{21}\ket{e_2}+\cdots+t_{n1}\ket{e_n}\\&T\ket{e_2}=t_{12}\ket{e_1}+t_{22}\ket{e_2}+\cdots+t_{n2}\ket{e_n}\\&T\ket{e_n}=t_{1n}\ket{e_1}+t_{2n}\ket{e_2}+\cdots+t_{nn}\ket{e_n}
+\end{aligned}
+$$
+
+那么 $T$ 在 $e$ 基下的表示就是:
+
+$$
+\begin{aligned}
+T_e&=\begin{pmatrix}t_{11}&t_{12}&{\dots}&t_{1n}\\t_{21}&t_{22}&{\dots}&t_{2n}\\{\vdots}&{\vdots}&&{\vdots}\\t_{n1}&t_{n2}&{\dots}&t_{nn}\end{pmatrix} \\\\
+&[T\ket{a}]_e = T_e\ket{a}_e
+\end{aligned}
+$$
+
+这是由线性算符的性质 $T(\alpha \ket{a} + \beta \ket{b}) = \alpha T\ket{a} + \beta T\ket{b}$ 导致的, 最终 $T$ 还是作用到了 $\ket{e_i}$ 上. 至于系数的对应关系, 可以这样想: 第一行和被作用的向量构成结果的第一行, 那必然全是和 $\ket{e_1}$ 相关的系数. 或者考察第一列, 也是一样的.
+
+第二个式子是说，实际上这里可以先没有任何坐标系，直接去写 $T\ket{a}$。不过我们看上面三排式子，如果 $\ket{a}$ 是按 $\ket{e}$ 分解的话，是最终还是在 $\ket{e}$ 表象，可以证明这和把算符和向量都投影到基向量上去然后再作用是等价的。
+
+## 四种特殊矩阵
+
+对称矩阵: $A^T = A$
+厄米共轭矩阵: $A^{\dagger} = A$
+
+正交矩阵: $A^TA = AA^T = I$
+幺正矩阵: $A^{\dagger}A = AA^{\dagger} = I$
+
+注意它们之间的退化关系.
+
+## 矩阵元表示
+
+如果 $e$ 是正交归一的, 那么
+
+$$
+t_{ij} = \bra{e_i}T\ket{e_j}
+$$
+
+这个可以从上面那三排式子看出来。
+
+## 变换矩阵
+
+为了记忆方便, 下面所有基都是正交归一的. 对于不是正交归一的基, 可以利用前面的方法得到相同的结构.
+
+把 $\ket{\psi}_b = S \ket{\psi}_e$ 写开来, 就是
+
+$$
+\begin{pmatrix}
+    \braket{b_1 | \psi} \\
+    \vdots
+\end{pmatrix}
+=\begin{pmatrix}
+    \braket{b_1 | e_1} & \dots \\
+    \vdots & \ddots
+\end{pmatrix}
+\begin{pmatrix}
+    \braket{e_1 | \psi} \\
+    \vdots
+\end{pmatrix}
+$$
+
+$S$ 必须这样写. 我们把这个将 $\ket{\psi}$ 的坐标数值从 $e$ 表象转到 $b$ 表象的矩阵记作 $S_{e \to b}$.
+
+把 $\ket{\psi}$ 送到 $\ket{\psi^{\prime}}$ 这个线性变换在 $e$ 表象和 $b$ 表象下分别为 $T_e$ 和 $T_b$, 那么它们的关系是怎样的呢? 可以这么思考:
+
+1. 为了得到 $\ket{\psi^{\prime}}_e$, 可以先用 $S_{e \to b}$ 把 $\ket{\psi}_e$ 送到 $\ket{\psi}_b$
+2. 这样就可以用 $T_b$ 作用在上面了.
+3. 用 $S_{b \to e}$ 作用在上面，转换回在 $e$ 表象下的坐标数值
+
+于是我们得到了等式:
+
+$$
+\ket{\psi^{\prime}}_e = T_e \ket{\psi}_e = S_{b \to e}T_bS_{e \to b} \ket{\psi}_e
+$$
+
+也就是说, 同一个算符在不同表象下有:
+
+$$
+\begin{aligned}
+    T_e &= S_{b \to e}T_bS_{e \to b} \\
+    &=\begin{pmatrix}
+    \braket{e_1 | b_1} & \dots \\
+    \vdots & \ddots
+    \end{pmatrix}
+    \begin{pmatrix}
+    \bra{b_1} T \ket{b_1} & \dots \\
+    \vdots & \ddots
+    \end{pmatrix}
+    \begin{pmatrix}
+    \braket{b_1 | e_1} & \dots \\
+    \vdots & \ddots
+    \end{pmatrix}
+\end{aligned}
+$$
+
+记住, 矩阵, 或者说算符, 是要作用在向量上的. 所以应该意识到这里的作用顺序是从右往左.
+
+## 厄米算符
+
+所有本征值为**实数**，并且不同本征值对应的本征向量**正交**。第一个是写出特征方程，作用上bra，取复共轭。第二个是写两个特征方程，作用上bra，取复共轭，要利用本征值为实数的结论。
+
+## 对角化
+
+前面我们知道了 $T_e = S_{b \to e}T_bS_{e \to b}$。下面我们证明，如果 $b$ 是 $T$ 的本征基, 那么 $T_b$ 将是对角的。
+
+为了得到 $T_b$，可以先在最右遍作用上 $S_{b \to e}$，我们会得到
+
+$$
+\begin{aligned}
+    T_e S_{b \to e} &= T_e (\ket{b_1}_e \dots \ket{b_n}_e) \\
+    &= (\lambda_1 \ket{b_1}_e \dots \lambda_n \ket{b_n}_e) \\
+    &= (\ket{b_1}_e \dots \ket{b_n}_e) \begin{pmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{pmatrix}
+\end{aligned}
+$$
+
+如果再在左边作用上 $S_{e \to b}$，那么就得到了对角元是本征值的 $T_b$。
+
+回想之前我们用基的变化去写算符的方法。我们可以说，在本征基下，算符的操作只是拉伸或者压缩，不会有旋转。
+
+$$
+T_b \ket{b_i}_b =\begin{pmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{pmatrix} \begin{pmatrix}
+\vdots \\ 1 \\ \vdots\\ \end{pmatrix} = \lambda_i \ket{b_i}_b
+$$
+
+作用在有限维的厄米算符都可以对角化。
